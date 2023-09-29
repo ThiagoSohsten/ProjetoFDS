@@ -1,0 +1,13 @@
+<!-- ... (Resto do layout do template) -->
+{% for produto in produtos %}
+    <div>
+        <img src="{{ produto.foto.url }}" alt="{{ produto.nome }}">
+        <h2>{{ produto.nome }}</h2>
+        <p>Preço: {{ produto.preco }}</p>
+        <button>Adicionar ao carrinho</button>
+    </div>
+{% endfor %}
+<a href="{% url 'avaliacao' %}">Avaliar Loja</a>
+<a href="{% url 'registro' %}">Registrar</a>
+<a href="{% url 'login' %}">Login</a>
+<!-- ... -->
