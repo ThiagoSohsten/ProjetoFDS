@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import login
 from django.shortcuts import render, redirect
-from .forms import CustomUserCreationForm, NichoForm
 from .models import Produto
 from django.contrib.auth import authenticate
 from django.contrib import messages
@@ -71,3 +70,30 @@ def avaliacao(request):
         form = AvaliacaoForm()
     return render(request, 'loja/avaliacao.html', {'form': form})
 
+# ... suas importações ...
+
+def carrinho(request):
+    carrinho = request.session.get('carrinho', {})
+    carrinho_itens = [
+        {'produto': Produto.objects.get(id=produto_id), 'quantidade': quantidade}
+        for produto_id, quantidade in carrinho.items()
+    ]
+    total = sum(item['produto'].preco * item['quantidade'] for item in carrinho_itens)
+    return render(request, 'loja/carrinho.html', {'carrinho_itens': carrinho_itens, 'total': total})
+
+def adicionar_ao_carrinho(request, produto_id):
+    carrinho = request.session.get('carrinho', {})
+    carrinho[str(produto_id)] = carrinho.get(str(produto_id), 0) + 1  # Adiciona ou atualiza
+    request.session['carrinho'] = carrinho
+    return redirect('carrinho')
+
+def remover_do_carrinho(request, produto_id):
+    carrinho = request.session.get('carrinho', {})
+    if str(produto_id) in carrinho:
+        del carrinho[str(produto_id)]  # Remove se estiver no carrinho
+    request.session['carrinho'] = carrinho
+    return redirect('carrinho')
+
+def confirmar_compra(request):
+    request.session['carrinho'] = {}  # Limpa o carrinho
+    return render(request, 'loja/compra_confirmada.html')

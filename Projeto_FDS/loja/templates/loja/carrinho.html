@@ -1,0 +1,23 @@
+
+
+{% block content %}
+<h2>Meu Carrinho</h2>
+
+{% if carrinho_itens %}
+    <ul>
+    {% for item in carrinho_itens %}
+        <li>
+            {{ item.produto.nome }} - {{ item.quantidade }} - {{ item.produto.preco }} 
+            <a href="{% url 'remove_do_carrinho' item.id %}">Remover</a>
+        </li>
+    {% endfor %}
+    </ul>
+    <p>Total: {{ total }}</p>
+    <a href="{% url 'confirmar_compra' %}">Confirmar Compra</a>
+{% else %}
+    <p>Seu carrinho está vazio</p>
+{% endif %}
+
+<a href="{% url 'home' %}">Continuar Comprando</a>
+
+{% endblock %}

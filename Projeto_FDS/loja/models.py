@@ -33,3 +33,12 @@ class Avaliacao(models.Model):
     def __str__(self):
         return f"Avaliação de {self.usuario.username} em {self.data_criada}"
 
+# ... importações e outros modelos ...
+
+class Carrinho(models.Model):
+    usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+
+class ItemCarrinho(models.Model):
+    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    quantidade = models.PositiveIntegerField()

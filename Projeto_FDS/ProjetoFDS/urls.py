@@ -4,6 +4,11 @@ from loja.views import registro, nicho, home, avaliacao  # Importa as views do a
 from django.conf import settings
 from django.conf.urls.static import static
 from loja.views import registro, nicho, home, avaliacao, login_view, logout_view
+# ... suas importações ...
+
+from loja.views import carrinho, adicionar_ao_carrinho, remover_do_carrinho, confirmar_compra  # Importa as views
+
+
 
 
 
@@ -16,6 +21,10 @@ urlpatterns = [
     path('avaliacao/', avaliacao, name='avaliacao'),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
+    path('carrinho/', carrinho, name='carrinho'),
+    path('carrinho/adicionar/<int:produto_id>/', adicionar_ao_carrinho, name='adicionar_ao_carrinho'),
+    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='remover_do_carrinho'),
+    path('carrinho/confirmar/', confirmar_compra, name='confirmar_compra'),
 
 
 
