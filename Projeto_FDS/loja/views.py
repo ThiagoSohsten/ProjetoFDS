@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib.auth import login
 from django.shortcuts import render, redirect
 from .models import Produto
@@ -6,6 +5,17 @@ from django.contrib.auth import authenticate
 from django.contrib import messages
 from django.contrib.auth import logout
 from .forms import CustomUserCreationForm, NichoForm, AvaliacaoForm
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import ItemCarrinho 
+
+def remove_do_carrinho(request, item_id):
+    item = get_object_or_404(ItemCarrinho, id=item_id)
+    item.delete()
+    return redirect('carrinho')
+
+def home(request):
+    produtos = Produto.objects.all()
+    return render(request, 'loja/home.html', {'produtos': produtos})
 
 
 
@@ -93,6 +103,8 @@ def remover_do_carrinho(request, produto_id):
         del carrinho[str(produto_id)]  # Remove se estiver no carrinho
     request.session['carrinho'] = carrinho
     return redirect('carrinho')
+
+
 
 def confirmar_compra(request):
     request.session['carrinho'] = {}  # Limpa o carrinho

@@ -1,17 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from loja.views import registro, nicho, home, avaliacao  # Importa as views do aplicativo 'loja'
+from django.urls import path, include
+from loja.views import registro, nicho, home, avaliacao, login_view, logout_view, carrinho, adicionar_ao_carrinho, remover_do_carrinho, confirmar_compra
 from django.conf import settings
 from django.conf.urls.static import static
-from loja.views import registro, nicho, home, avaliacao, login_view, logout_view
-# ... suas importações ...
-
-from loja.views import carrinho, adicionar_ao_carrinho, remover_do_carrinho, confirmar_compra  # Importa as views
-
-
-
-
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,9 +16,8 @@ urlpatterns = [
     path('carrinho/adicionar/<int:produto_id>/', adicionar_ao_carrinho, name='adicionar_ao_carrinho'),
     path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='remover_do_carrinho'),
     path('carrinho/confirmar/', confirmar_compra, name='confirmar_compra'),
+    path('', home, name='home'),
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
-
-]
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+app_name = 'loja'

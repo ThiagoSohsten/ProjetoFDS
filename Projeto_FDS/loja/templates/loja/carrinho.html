@@ -7,8 +7,12 @@
     <ul>
     {% for item in carrinho_itens %}
         <li>
+            {% if item.id %}
             {{ item.produto.nome }} - {{ item.quantidade }} - {{ item.produto.preco }} 
-            <a href="{% url 'remove_do_carrinho' item.id %}">Remover</a>
+            
+            <a href="{% url 'remover_do_carrinho' item.id %}">Remover</a>
+            {% endif %}
+
         </li>
     {% endfor %}
     </ul>

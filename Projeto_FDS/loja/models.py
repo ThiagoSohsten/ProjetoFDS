@@ -17,13 +17,19 @@ class CustomUser(AbstractUser):
 
 
 
+# loja/models.py
+
+from django.db import models
+
 class Produto(models.Model):
     nome = models.CharField(max_length=255)
-    foto = models.ImageField(upload_to='produtos/fotos/')
-    preco = models.DecimalField(max_digits=8, decimal_places=2)
-    
+    preco = models.DecimalField(max_digits=6, decimal_places=2)
+    descricao = models.TextField(blank=True, null=True)
+    foto = models.ImageField(upload_to='produtos/fotos/', blank=True, null=True)
+
     def __str__(self):
         return self.nome
+
 
 class Avaliacao(models.Model):
     usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
@@ -33,7 +39,7 @@ class Avaliacao(models.Model):
     def __str__(self):
         return f"Avaliação de {self.usuario.username} em {self.data_criada}"
 
-# ... importações e outros modelos ...
+
 
 class Carrinho(models.Model):
     usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
