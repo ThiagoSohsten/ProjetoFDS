@@ -60,6 +60,7 @@
 </div>
   <h3>Entrega 2:</h3>
   <p>As histórias de avaliar loja,adicionar ao carrinho e escolher nicho do produto, foram as escolhidas para essa entrega e todas foram feitas em pares, Thiago von Sohsten com Lucas Dias,Luis Felipe e Tiago Jardim respectivamente, pois tinha um pouco mais de experiência, o diagrama de atividades foi feito por Tiago Jardim, O Issue bug tracker foi feito em conjunto, e o deployment por Thiago von Sohsten, O jira da equipe foi perdido devido ao stutent pack que expirou então um segundo jira foi criado pelo grupo, o Diagrama e o Screencast se encontram no Drive.</p>
+  <a href="prainha.azurewebsites.net">Link do deployment prainha</a></strong></p>
   <h3>Entrega 3:</h3>
   <h3>Entrega 4:</h3>
    <h2>Linguagens Utilizadas</h2>
