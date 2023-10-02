@@ -41,11 +41,17 @@
     <p><strong>Discord (Nosso Canal de comunicação): <a href="https://discord.gg/nVQrqERY">Convite para o Discord</a></strong></p>
   </li>
 </ul>
-<h2>Print do quadro do jira:</h2>
+<h2>Print do quadro do jira(ENTREGA 1):</h2>
 <img src="https://pbs.twimg.com/media/F6T5sDCXIAA6tNT?format=webp&name=small" alt="quadro">
 <br>
-<h2>Print do baclog do jira:</h2>
+<h2>Print do backlog do jira(ENTREGA 1):</h2>
 <img src="https://pbs.twimg.com/media/F6T6YZfWQAE9rxs?format=webp&name=small" alt="backlog">
+
+<h2>Print do quadro com a sprint do jira(ENTREGA 2):</h2>
+<img src="https://pbs.twimg.com/media/F7dKp6-WEAAJFrp?format=jpg&name=small" alt="quadro">
+<br>
+<h2>Print do backlog do jira(ENTREGA 2):</h2>
+<img src="https://pbs.twimg.com/media/F7dKm7VXkAAJVHl?format=jpg&name=small" alt="backlog">
   
   <h2>Relatórios das Entregas</h2>
 <div style="text-align: justify;">
