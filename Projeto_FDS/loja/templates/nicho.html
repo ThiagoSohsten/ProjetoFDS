@@ -1,3 +1,67 @@
+<style>
+    /* Estilos gerais */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos para o contêiner do formulário */
+    .form-container {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    /* Estilos para o título da página */
+    h2 {
+        color: #009688;
+    }
+
+    /* Estilos para o formulário */
+    form {
+        margin-top: 20px;
+    }
+
+    /* Estilos para os campos de entrada */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    /* Estilos para o botão de envio */
+    button {
+        background-color: #009688;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #00796b;
+    }
+</style>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
