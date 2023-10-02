@@ -23,7 +23,7 @@
 <h2>Links das Entregas</h2>
 <ul>
   <li>
-    <img src="https://praioca.atlassian.net/jira/software/projects/PRAIOC/boards/2/backlog?selectedIssue=PRAIOC-6" alt="Jira">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/JIRA.png/220px-JIRA.png" alt="Jira">
     <p><strong>Jira (Histórias):<a href="https://camisasnordeste.atlassian.net/jira/software/projects/PRAIA/boards/5/backlog?epics=visible"> Link para o Jira</a></strong></p>
   </li>
   <li>
