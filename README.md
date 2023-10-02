@@ -53,6 +53,7 @@
   <p>A equipe inteira se reuniu no Discord para definir as histórias que posteriomente foram postas no backlog do jira, Thiago von Sohsten e Lucas Dias ficaram responsáveis pela criação do Jira e sua configuração. O protótipo Lo-Fi foi realizado por Thiago von Sohsten através do Figma, e a gravação do Screencast do protótipo foi realizada por Thiago von Sohsten, roteirizada e auxiliada por Luis Felipe e Tiago Jardim. É importante mencionar que o integrante Artur Melo deu entrada no processo de trancamento de curso, portanto o grupo que inicialmente contava com 5 membros agora conta com apenas 4.</p>
 </div>
   <h3>Entrega 2:</h3>
+  <p>As histórias de avaliar loja,adicionar ao carrinho e escolher nicho do produto, foram as escolhidas para essa entrega e todas foram feitas em pares, Thiago von Sohsten com Lucas Dias,Luis Felipe e Tiago Jardim respectivamente, pois tinha um pouco mais de experiência, o diagrama de atividades foi feito por Tiago Jardim, O Issue bug tracker foi feito em conjunto, e o deployment por Thiago von Sohsten, O jira da equipe foi perdido devido ao stutent pack que expirou então um segundo jira foi criado pelo grupo, o Diagrama e o Screencast se encontram no Drive.</p>
   <h3>Entrega 3:</h3>
   <h3>Entrega 4:</h3>
    <h2>Linguagens Utilizadas</h2>
