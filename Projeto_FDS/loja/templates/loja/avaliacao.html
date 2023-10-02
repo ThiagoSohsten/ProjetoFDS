@@ -1,5 +1,94 @@
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Enviar Avaliação</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Loja</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para o contêiner da página */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Estilos para o título da página */
+        h2 {
+            margin-top: 0;
+            color: #009688;
+        }
+
+        /* Estilos para o botão de envio */
+        button {
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #00796b;
+        }
+
+        /* Estilos para o formulário */
+        form {
+            margin-top: 20px;
+        }
+
+        /* Estilos para mensagens de erro */
+        .error-message {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Avaliar Loja</h2>
+        <form id="avaliacao-form" method="post" onsubmit="return validarForm()">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <script>
+        function validarForm() {
+            var form = document.getElementById('avaliacao-form');
+            var comentario = form.querySelector('#id_comentario').value.trim();
+            var classificacao = form.querySelector('#id_classificacao').value;
+
+            if (comentario === "" || classificacao === "") {
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = "Por favor, preencha todos os campos.";
+                return false;
+            }
+
+            // Ocultar mensagens de erro, se houver
+            var errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = "";
+
+            // Exibir alerta de sucesso
+            alert("Avaliação enviada com sucesso!");
+
+            // Se todas as validações passarem, o formulário será enviado
+            return true;
+        }
+    </script>
+</body>
+</html>

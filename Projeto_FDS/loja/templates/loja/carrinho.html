@@ -1,27 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Estilos para o contêiner do carrinho */
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
 
-{% block content %}
-<h2>Meu Carrinho</h2>
+        /* Estilos para o título da página */
+        h2 {
+            color: #009688;
+        }
 
-{% if carrinho_itens %}
-    <ul>
-    {% for item in carrinho_itens %}
-        <li>
-            {% if item.id %}
-            {{ item.produto.nome }} - {{ item.quantidade }} - {{ item.produto.preco }} 
-            
-            <a href="{% url 'remover_do_carrinho' item.id %}">Remover</a>
-            {% endif %}
+        /* Estilos para a lista de itens no carrinho */
+        .cart-list {
+            list-style: none;
+            padding: 0;
+        }
 
-        </li>
-    {% endfor %}
-    </ul>
-    <p>Total: {{ total }}</p>
-    <a href="{% url 'confirmar_compra' %}">Confirmar Compra</a>
-{% else %}
-    <p>Seu carrinho está vazio</p>
-{% endif %}
+        .cart-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-<a href="{% url 'home' %}">Continuar Comprando</a>
+        .cart-item a {
+            color: #009688;
+            text-decoration: none;
+        }
 
-{% endblock %}
+        .cart-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para o botão "Confirmar Compra" */
+        .confirm-button {
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .confirm-button:hover {
+            background-color: #00796b;
+        }
+
+        /* Estilos para a mensagem de carrinho vazio */
+        .empty-cart-message {
+            color: #777;
+        }
+
+        /* Estilos para o link "Continuar Comprando" */
+        .continue-shopping-link {
+            color: #009688;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .continue-shopping-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h2>Meu Carrinho</h2>
+
+        {% if carrinho_itens %}
+            <ul class="cart-list">
+                {% for item in carrinho_itens %}
+                    <li class="cart-item">
+                        {% if item.id %}
+                        {{ item.produto.nome }} - {{ item.quantidade }} - {{ item.produto.preco }} 
+                        <a href="{% url 'remover_do_carrinho' item.id %}">Remover</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+            <p class="total">Total: {{ total }}</p>
+            <a href="{% url 'confirmar_compra' %}" class="confirm-button">Confirmar Compra</a>
+        {% else %}
+            <p class="empty-cart-message">Seu carrinho está vazio</p>
+        {% endif %}
+
+        <a href="{% url 'home' %}" class="continue-shopping-link">Continuar Comprando</a>
+    </div>
+</body>
+</html>
+
