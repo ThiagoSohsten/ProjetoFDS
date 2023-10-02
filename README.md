@@ -24,7 +24,7 @@
 <ul>
   <li>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/JIRA.png/220px-JIRA.png" alt="Jira">
-    <p><strong>Jira (Histórias):<a href="https://camisasnordeste.atlassian.net/jira/software/projects/PRAIA/boards/5/backlog?epics=visible"> Link para o Jira</a></strong></p>
+    <p><strong>Jira (Histórias):<a href="https://praioca.atlassian.net/jira/software/projects/PRAIOC/boards/2/backlog"> Link para o Jira</a></strong></p>
   </li>
   <li>
     <img src="https://yt3.googleusercontent.com/ytc/AOPolaSniT6fNseJ5-j8Y5nGJoBdXG3qX7aWq-HXOrkQkw=s176-c-k-c0x00ffffff-no-rj" alt="Figma">
@@ -60,7 +60,8 @@
 </div>
   <h3>Entrega 2:</h3>
   <p>As histórias de avaliar loja,adicionar ao carrinho e escolher nicho do produto, foram as escolhidas para essa entrega e todas foram feitas em pares, Thiago von Sohsten com Lucas Dias,Luis Felipe e Tiago Jardim respectivamente, pois tinha um pouco mais de experiência, o diagrama de atividades foi feito por Tiago Jardim, O Issue bug tracker foi feito em conjunto, e o deployment por Thiago von Sohsten, O jira da equipe foi perdido devido ao stutent pack que expirou então um segundo jira foi criado pelo grupo, o Diagrama e o Screencast se encontram no Drive.</p>
-  <a href="prainha.azurewebsites.net">Link do deployment prainha</a></strong></p>
+ 
+ <a href="prainha.azurewebsites.net">Link para o deploy</a>
   <h3>Entrega 3:</h3>
   <h3>Entrega 4:</h3>
    <h2>Linguagens Utilizadas</h2>
