@@ -7,6 +7,9 @@ from django.contrib.auth import logout
 from .forms import CustomUserCreationForm, NichoForm, AvaliacaoForm
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import ItemCarrinho 
+from django.http import HttpResponse
+from .forms import CadastroCartaoForm  # você precisará criar esse form
+
 
 def remove_do_carrinho(request, item_id):
     item = get_object_or_404(ItemCarrinho, id=item_id)
@@ -103,9 +106,17 @@ def remover_do_carrinho(request, produto_id):
         del carrinho[str(produto_id)]  # Remove se estiver no carrinho
     request.session['carrinho'] = carrinho
     return redirect('carrinho')
-
-
-
 def confirmar_compra(request):
-    request.session['carrinho'] = {}  # Limpa o carrinho
-    return render(request, 'loja/compra_confirmada.html')
+    if request.method == 'POST':
+        form = CadastroCartaoForm(request.POST)
+        if form.is_valid():
+            cartao = form.save(commit=False)
+            cartao.usuario = request.user
+            cartao.save()
+            request.session['carrinho'] = {}  # Limpa o carrinho
+            return render(request, 'loja/compra_confirmada.html')
+    else:
+        form = CadastroCartaoForm()
+
+    return render(request, 'loja/cadastro_cartao.html', {'form': form})
+

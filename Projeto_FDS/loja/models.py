@@ -48,3 +48,13 @@ class ItemCarrinho(models.Model):
     carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)
     produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
     quantidade = models.PositiveIntegerField()
+    
+class Cartao(models.Model):
+    usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    numero = models.CharField(max_length=16)
+    validade = models.DateField()
+    cvv = models.CharField(max_length=3)
+
+    def __str__(self):
+        return f'Cartão final {self.numero[-4:]} de {self.usuario.username}'
+
