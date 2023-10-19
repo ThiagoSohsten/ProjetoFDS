@@ -23,8 +23,8 @@
 <h2>Links das Entregas</h2>
 <ul>
   <li>
-    <img src="https://praioca.atlassian.net/jira/software/projects/PRAIOC/boards/2/backlog?selectedIssue=PRAIOC-6" alt="Jira">
-    <p><strong>Jira (Histórias):<a href="https://camisasnordeste.atlassian.net/jira/software/projects/PRAIA/boards/5/backlog?epics=visible"> Link para o Jira</a></strong></p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/JIRA.png/220px-JIRA.png" alt="Jira">
+    <p><strong>Jira (Histórias):<a href="https://praioca.atlassian.net/jira/software/projects/PRAIOC/boards/2/backlog"> Link para o Jira</a></strong></p>
   </li>
   <li>
     <img src="https://yt3.googleusercontent.com/ytc/AOPolaSniT6fNseJ5-j8Y5nGJoBdXG3qX7aWq-HXOrkQkw=s176-c-k-c0x00ffffff-no-rj" alt="Figma">
@@ -32,7 +32,7 @@
   </li>
   <li>
     <img src="https://yt3.googleusercontent.com/IKyXeSMd3DtfAjRGyKicdwlrzD4bIGdpsRepFg6yJ5cUloq7AilRgUQjK7yPeNVNQguNh09r=s176-c-k-c0x00ffffff-no-rj" alt="Drive">
-    <p><strong>Drive (Screencast): <a href="https://drive.google.com/drive/folders/1IQZgEtp__vsEfwzfm4nDA6aC549rs3jV?usp=drive_link">Link para o Drive</a></strong></p>
+    <p><strong>Drive (Screencasts,Diagramas e Prints): <a href="https://drive.google.com/drive/folders/1IQZgEtp__vsEfwzfm4nDA6aC549rs3jV?usp=drive_link">Link para o Drive</a></strong></p>
    
  <a href="https://youtu.be/dvE2VySL1_A?si=tFi-1vtA--QZInl6">Youtube(caso prefira)</a></strong></p>
   </li>
@@ -41,11 +41,17 @@
     <p><strong>Discord (Nosso Canal de comunicação): <a href="https://discord.gg/nVQrqERY">Convite para o Discord</a></strong></p>
   </li>
 </ul>
-<h2>Print do quadro do jira:</h2>
+<h2>Print do quadro do jira(ENTREGA 1):</h2>
 <img src="https://pbs.twimg.com/media/F6T5sDCXIAA6tNT?format=webp&name=small" alt="quadro">
 <br>
-<h2>Print do baclog do jira:</h2>
+<h2>Print do backlog do jira(ENTREGA 1):</h2>
 <img src="https://pbs.twimg.com/media/F6T6YZfWQAE9rxs?format=webp&name=small" alt="backlog">
+
+<h2>Print do quadro com a sprint do jira(ENTREGA 2):</h2>
+<img src="https://pbs.twimg.com/media/F7dKp6-WEAAJFrp?format=jpg&name=small" alt="quadro">
+<br>
+<h2>Print do backlog do jira(ENTREGA 2):</h2>
+<img src="https://pbs.twimg.com/media/F7dKm7VXkAAJVHl?format=jpg&name=small" alt="backlog">
   
   <h2>Relatórios das Entregas</h2>
 <div style="text-align: justify;">
@@ -54,6 +60,8 @@
 </div>
   <h3>Entrega 2:</h3>
   <p>As histórias de avaliar loja,adicionar ao carrinho e escolher nicho do produto, foram as escolhidas para essa entrega e todas foram feitas em pares, Thiago von Sohsten com Lucas Dias,Luis Felipe e Tiago Jardim respectivamente, pois tinha um pouco mais de experiência, o diagrama de atividades foi feito por Tiago Jardim, O Issue bug tracker foi feito em conjunto, e o deployment por Thiago von Sohsten, O jira da equipe foi perdido devido ao stutent pack que expirou então um segundo jira foi criado pelo grupo, o Diagrama e o Screencast se encontram no Drive.</p>
+ 
+ <a href="prainha.azurewebsites.net">Link para o deploy</a>
   <h3>Entrega 3:</h3>
   <h3>Entrega 4:</h3>
    <h2>Linguagens Utilizadas</h2>
