@@ -1,14 +1,10 @@
-from django.contrib.auth import login
-from django.shortcuts import render, redirect
-from .models import Produto
-from django.contrib.auth import authenticate
 from django.contrib import messages
-from django.contrib.auth import logout
+from django.contrib.auth import logout,login,authenticate
 from .forms import CustomUserCreationForm, NichoForm, AvaliacaoForm
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import ItemCarrinho 
+from .models import ItemCarrinho,Produto 
 from django.http import HttpResponse
-from .forms import CadastroCartaoForm  # você precisará criar esse form
+from .forms import CadastroCartaoForm 
 
 
 def remove_do_carrinho(request, item_id):
