@@ -5,22 +5,22 @@
         background-color: #f0f0f0;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center; /* Centralizar horizontalmente */
+        align-items: ;
+        height: 100vh; /* Preencher a altura da tela */
     }
 
-    /* Estilos para o contêiner do formulário */
-    .form-container {
-        max-width: 400px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        text-align: center;
+    /* Estilos para o contêiner */
+    .container {
+        text-align: ;
+        border: 10px solid #ddd; /* Adicione esta linha para a borda */
+        padding: 20px; /* Ajuste o preenchimento para dar espaço à borda */
+        
     }
 
     /* Estilos para o título da página */
-    h2 {
+    h1 {
         color: #009688;
     }
 
@@ -62,9 +62,11 @@
         background-color: #00796b;
     }
 </style>
-<h1>Tela de Cadastro</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Registrar</button>
-</form>
+<div class="container">
+    <h1>Tela de Cadastro</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrar</button>
+    </form>
+</div>
