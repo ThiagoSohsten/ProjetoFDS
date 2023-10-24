@@ -57,4 +57,29 @@ class Cartao(models.Model):
 
     def __str__(self):
         return f'Cartão final {self.numero[-4:]} de {self.usuario.username}'
+class Devolucao(models.Model):
+    pedido = models.ForeignKey('Pedido', on_delete=models.CASCADE)
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    motivo = models.CharField(max_length=255, blank=True, null=True)
+    data_devolucao = models.DateTimeField(auto_now_add=True)
+    STATUS_CHOICES = [
+        ('pendente', 'Pendente'),
+        ('aprovado', 'Aprovado'),
+        ('rejeitado', 'Rejeitado')
+    ]
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='pendente')
+
+    def __str__(self):
+        return f"Devolução de {self.pedido.usuario.username} em {self.data_devolucao}"
+class Pedido(models.Model):
+    usuario = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    produtos = models.ManyToManyField(Produto, through='ItemPedido')
+    data_pedido = models.DateTimeField(auto_now_add=True)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
+
+class ItemPedido(models.Model):
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
+    quantidade = models.PositiveIntegerField()
+
 

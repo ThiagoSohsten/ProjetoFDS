@@ -116,3 +116,30 @@ def confirmar_compra(request):
 
     return render(request, 'loja/cadastro_cartao.html', {'form': form})
 
+from django.shortcuts import render, redirect
+from .models import Pedido, Devolucao, Produto
+
+def minhas_compras(request):
+    pedidos = Pedido.objects.filter(usuario=request.user)
+    return render(request, 'loja/minhas_compras.html', {'pedidos': pedidos})
+
+
+def iniciar_devolucao(request, pedido_id):
+    pedido = Pedido.objects.get(id=pedido_id)
+    if request.method == 'POST':
+        produtos_a_devolver = request.POST.getlist('produtos_a_devolver')
+        for produto_id in produtos_a_devolver:
+            produto = Produto.objects.get(id=produto_id)
+            Devolucao.objects.create(pedido=pedido, produto=produto)
+        return redirect('especificar_motivo_devolucao', pedido_id=pedido_id)
+    return render(request, 'loja/iniciar_devolucao.html', {'pedido': pedido})
+
+def especificar_motivo_devolucao(request, pedido_id):
+    if request.method == 'POST':
+        motivo = request.POST.get('motivo')
+        devolucoes = Devolucao.objects.filter(pedido__id=pedido_id)
+        for devolucao in devolucoes:
+            devolucao.motivo = motivo
+            devolucao.save()
+        return redirect('home')
+    return render(request, 'loja/especificar_motivo.html')

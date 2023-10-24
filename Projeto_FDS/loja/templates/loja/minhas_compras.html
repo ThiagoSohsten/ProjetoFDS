@@ -1,0 +1,9 @@
+<h1>Minhas Compras</h1>
+<ul>
+{% for pedido in pedidos %}
+    <li>
+        Pedido {{ pedido.id }}: 
+        <a href="{% url 'iniciar_devolucao' pedido.id %}">Iniciar Devolução</a>
+    </li>
+{% endfor %}
+</ul>

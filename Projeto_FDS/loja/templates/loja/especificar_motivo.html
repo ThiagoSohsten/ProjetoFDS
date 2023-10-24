@@ -1,0 +1,7 @@
+<h1>Especificar Motivo da Devolução</h1>
+<form method="post">
+    {% csrf_token %}
+    <label>Motivo:</label>
+    <textarea name="motivo"></textarea><br>
+    <input type="submit" value="Confirmar Motivo">
+</form>

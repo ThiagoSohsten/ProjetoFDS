@@ -1,0 +1,9 @@
+<h1>Iniciar Devolução</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for item in pedido.produtos.all %}
+    <input type="checkbox" name="produtos_a_devolver" value="{{ item.id }}">
+    {{ item.nome }}<br>
+    {% endfor %}
+    <input type="submit" value="Confirmar Devolução">
+</form>

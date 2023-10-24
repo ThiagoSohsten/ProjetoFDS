@@ -3,6 +3,8 @@ from django.urls import path, include
 from loja.views import registro, nicho, home, avaliacao, login_view, logout_view, carrinho, adicionar_ao_carrinho, remover_do_carrinho, confirmar_compra
 from django.conf import settings
 from django.conf.urls.static import static
+from loja.views import minhas_compras, iniciar_devolucao, especificar_motivo_devolucao
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -17,6 +19,10 @@ urlpatterns = [
     path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='remover_do_carrinho'),
     path('carrinho/confirmar/', confirmar_compra, name='confirmar_compra'),
     path('', home, name='home'),
+    path('minhas_compras/', minhas_compras, name='minhas_compras'),
+    path('iniciar_devolucao/<int:pedido_id>/', iniciar_devolucao, name='iniciar_devolucao'),
+    path('especificar_motivo_devolucao/<int:pedido_id>/', especificar_motivo_devolucao, name='especificar_motivo_devolucao'),
+
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
