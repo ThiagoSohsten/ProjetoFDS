@@ -95,13 +95,14 @@ def adicionar_ao_carrinho(request, produto_id):
     carrinho[str(produto_id)] = carrinho.get(str(produto_id), 0) + 1  # Adiciona ou atualiza
     request.session['carrinho'] = carrinho
     return redirect('carrinho')
-
 def remover_do_carrinho(request, produto_id):
     carrinho = request.session.get('carrinho', {})
     if str(produto_id) in carrinho:
         del carrinho[str(produto_id)]  # Remove se estiver no carrinho
     request.session['carrinho'] = carrinho
     return redirect('carrinho')
+
+
 def confirmar_compra(request):
     if request.method == 'POST':
         form = CadastroCartaoForm(request.POST)
