@@ -98,13 +98,12 @@
         {% if carrinho_itens %}
             <ul class="cart-list">
                 {% for item in carrinho_itens %}
-                    <li class="cart-item">
-                        {% if item.id %}
-                        {{ item.produto.nome }} - {{ item.quantidade }} - {{ item.produto.preco }} 
-                        <a href="{% url 'remover_do_carrinho' item.id %}">Remover</a>
-                        {% endif %}
-                    </li>
-                {% endfor %}
+                <div>
+                    {{ item.produto.nome }} - {{ item.quantidade }}
+                    <a href="{% url 'remover_do_carrinho' produto_id=item.produto.id %}">Remover</a>
+                </div>
+            {% endfor %}
+            
             </ul>
             <p class="total">Total: {{ total }}</p>
             <a href="{% url 'confirmar_compra' %}" class="confirm-button">Confirmar Compra</a>

@@ -22,7 +22,7 @@ urlpatterns = [
     path('minhas_compras/', minhas_compras, name='minhas_compras'),
     path('iniciar_devolucao/<int:pedido_id>/', iniciar_devolucao, name='iniciar_devolucao'),
     path('especificar_motivo_devolucao/<int:pedido_id>/', especificar_motivo_devolucao, name='especificar_motivo_devolucao'),
-
+   
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
