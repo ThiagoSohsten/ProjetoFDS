@@ -1,7 +1,7 @@
   <h2>Equipe de Desenvolvimento</h2>
   <ul>
     <li>
-      <img src="https://pps.whatsapp.net/v/t61.24694-24/376300446_321011637116309_7089182106543026557_n.jpg?ccb=11-4&oh=01_AdQCUMyXVc8M7tbiRmhVYo457RqFkMU32SYRxmejUa5Kng&oe=652172A9&_nc_sid=000000&_nc_cat=102" alt="Foto do Membro 1" width="100">
+      <img src="https://media.licdn.com/dms/image/D4D03AQFn0xjo-w_sqA/profile-displayphoto-shrink_200_200/0/1696353347834?e=1703721600&v=beta&t=78K1lmvIbA-wQm6qnpk9e4sBBn-Tx-6mpfPdo50bcLA" alt="Foto do Membro 1" width="100">
       <p><strong>Thiago von Sohsten</strong><br>Email: tlvs@cesar.school</p>
     </li>
     <li>
@@ -59,7 +59,7 @@
   <p>A equipe inteira se reuniu no Discord para definir as histórias que posteriomente foram postas no backlog do jira, Thiago von Sohsten e Lucas Dias ficaram responsáveis pela criação do Jira e sua configuração. O protótipo Lo-Fi foi realizado por Thiago von Sohsten através do Figma, e a gravação do Screencast do protótipo foi realizada por Thiago von Sohsten, roteirizada e auxiliada por Luis Felipe e Tiago Jardim. É importante mencionar que o integrante Artur Melo deu entrada no processo de trancamento de curso, portanto o grupo que inicialmente contava com 5 membros agora conta com apenas 4.</p>
 </div>
   <h3>Entrega 2:</h3>
-  <p>As histórias de avaliar loja,adicionar ao carrinho e escolher nicho do produto, foram as escolhidas para essa entrega e todas foram feitas em pares, Thiago von Sohsten com Lucas Dias,Luis Felipe e Tiago Jardim respectivamente, pois tinha um pouco mais de experiência, o diagrama de atividades foi feito por Tiago Jardim, O Issue bug tracker foi feito em conjunto, e o deployment por Thiago von Sohsten, O jira da equipe foi perdido devido ao stutent pack que expirou então um segundo jira foi criado pelo grupo, o Diagrama e o Screencast se encontram no Drive.</p>
+  <p>As histórias de avaliar loja,adicionar ao carrinho e escolher nicho do produto, foram as escolhidas para essa entrega e todas foram feitas em pares, Thiago von Sohsten com Lucas Dias,Luis Felipe e Tiago Jardim respectivamente, pois tinha um pouco mais de experiência, o diagrama de atividades foi feito por Tiago Jardim, O Issue bug tracker foi feito em conjunto, e o deployment por Thiago von Sohsten, O jira da equipe foi perdido devido ao stutent pack que expirou então um segundo jira foi criado pelo grupo, o Diagrama e o Screencast se encontram no Drive. Com essa experiência em programação em pares a nossa produtividade aumentou bastante principalmente na implementação das histórias mesmos para os membros com pouca experiência e frotaleceu os laços da equipe.</p>
  
  <a href="prainha.azurewebsites.net">Link para o deploy</a>
   <h3>Entrega 3:</h3>
