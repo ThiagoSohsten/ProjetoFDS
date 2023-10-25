@@ -23,6 +23,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             text-align: center;
+            font-size: 25px;
         }
 
         /* Estilos para o título da página */
@@ -62,6 +63,7 @@
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
+            font-size: 25px;
         }
 
         button:hover {
@@ -71,7 +73,7 @@
 </head>
 <body>
     <div class="form-container">
-        <h2>Login-Loja de Praia</h2>
+        <h2>Login Praiano</h2>
         <form method="post" id="login-form" onsubmit="return validarForm()">
             {% csrf_token %}
             <div class="form-group">
@@ -82,7 +84,7 @@
                 <label for="id_password">Senha:</label>
                 <input type="password" name="password" id="id_password" required>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit">Entrar</button>
         </form>
     </div>
 

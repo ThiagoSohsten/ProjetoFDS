@@ -1,7 +1,58 @@
-{% extends "cadastro_cartao.html" %}
+<style>
+    /* Estilos gerais */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; /* Centralizar horizontalmente */
+        align-items: center;
+        height: 100vh; /* Preencher a altura da tela */
+    }
 
-{% block content %}
-<h2>Compra Confirmada</h2>
-<p>Obrigado por sua compra!</p>
-<a href="{% url 'home' %}">Continuar Comprando</a>
-{% endblock %}
+    /* Estilos para o contêiner */
+    div {
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 50px;
+    }
+
+    /* Estilos para o título da página */
+    h2 {
+        color: #009688;
+        font-size: 50px; /* Tamanho da fonte aumentado */
+        margin-bottom: 10px; /* Espaço extra abaixo do título */
+    }
+
+    /* Estilos para o texto de agradecimento */
+    p {
+        font-size: 25px; /* Tamanho da fonte aumentado */
+        margin: 20px 0;
+    }
+
+    /* Estilos para o link "Continuar Comprando" */
+    a {
+        text-decoration: none;
+        background-color: #009688;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-size: 25px;
+    }
+
+    a:hover {
+        background-color: #00796b;
+    }
+</style>
+<div>
+    {% block content %}
+    <h2>Compra Confirmada</h2>
+    <p>Obrigado por sua compra!</p>
+    <a href="{% url 'home' %}">Continuar Comprando</a>
+    {% endblock %}
+</div>
