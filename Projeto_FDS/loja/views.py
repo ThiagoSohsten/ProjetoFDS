@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import ItemCarrinho,Produto 
 from django.http import HttpResponse
 from .forms import CadastroCartaoForm 
-from .models import ItemCarrinho, Produto, CustomUser
+from .models import ItemCarrinho, Produto, CustomUser, ItemPedido
 
 
 def remove_do_carrinho(request, item_id):
@@ -113,10 +113,28 @@ def confirmar_compra(request):
     if request.method == 'POST':
         form = CadastroCartaoForm(request.POST)
         if form.is_valid():
-            cartao = form.save(commit=False)
-            cartao.usuario = request.user
-            cartao.save()
-            request.session['carrinho'] = {}  # Limpa o carrinho
+            # 1. Crie um novo pedido para o usuário atual
+            carrinho = request.session.get('carrinho', {})
+            carrinho_itens = [
+                {'produto': Produto.objects.get(id=produto_id), 'quantidade': quantidade}
+                for produto_id, quantidade in carrinho.items()
+            ]
+            total = sum(item['produto'].preco * item['quantidade'] for item in carrinho_itens)
+            novo_pedido = Pedido.objects.create(usuario=request.user, total=total)
+            
+            # 2. Para cada item no carrinho, crie um ItemPedido.
+            for item in carrinho_itens:
+                ItemPedido.objects.create(
+                    produto=item['produto'],
+                    pedido=novo_pedido,
+                    quantidade=item['quantidade']
+                )
+            
+            # ... restante da lógica para salvar cartão ...
+
+            # 3. Depois de criar todos os ItemPedido associados, limpe o carrinho.
+            request.session['carrinho'] = {}
+            
             return render(request, 'loja/compra_confirmada.html')
     else:
         form = CadastroCartaoForm()
