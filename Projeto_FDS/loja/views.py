@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import ItemCarrinho,Produto 
 from django.http import HttpResponse
 from .forms import CadastroCartaoForm 
+from .models import ItemCarrinho, Produto, CustomUser
 
 
 def remove_do_carrinho(request, item_id):
@@ -104,6 +105,11 @@ def remover_do_carrinho(request, produto_id):
 
 
 def confirmar_compra(request):
+    # Verificando se o usuário está autenticado
+    if not request.user.is_authenticated:
+        messages.error(request, 'Você precisa estar logado para confirmar a compra.')
+        return redirect('login')  # Redirecionar para a página de login se o usuário não estiver autenticado
+
     if request.method == 'POST':
         form = CadastroCartaoForm(request.POST)
         if form.is_valid():
@@ -116,6 +122,7 @@ def confirmar_compra(request):
         form = CadastroCartaoForm()
 
     return render(request, 'loja/cadastro_cartao.html', {'form': form})
+
 
 from django.shortcuts import render, redirect
 from .models import Pedido, Devolucao, Produto
