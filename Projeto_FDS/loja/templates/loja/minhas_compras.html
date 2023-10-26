@@ -48,13 +48,18 @@
     }
 </style>
 <div class="container">
+    {% block content %}
     <h1>Minhas Compras</h1>
-    <ul>
+    {% if pedidos %}
+        <ul>
         {% for pedido in pedidos %}
             <li>
-                Pedido {{ pedido.id }}:
-                <a href="{% url 'iniciar_devolucao' pedido.id %}">Iniciar Devolução</a>
+                Pedido #{{ pedido.id }} realizado em {{ pedido.data_pedido }}. Total: {{ pedido.total }}
             </li>
         {% endfor %}
-    </ul>
+        </ul>
+    {% else %}
+        <p>Você ainda não fez nenhuma compra.</p>
+    {% endif %}
+{% endblock %}
 </div>
