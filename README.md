@@ -5,11 +5,11 @@
       <p><strong>Thiago von Sohsten</strong><br>Email: tlvs@cesar.school</p>
     </li>
     <li>
-      <img src="https://media.licdn.com/dms/image/D4D03AQEVBLLBwxQtAw/profile-displayphoto-shrink_200_200/0/1692071479436?e=1698278400&v=beta&t=v_1HA3CfUVeBu2J9Qf9eggChKreZe36LxfI0MUGc9gY" alt="Foto do Membro 2" width="100">
+      <img src="https://media.licdn.com/dms/image/D4D03AQEVBLLBwxQtAw/profile-displayphoto-shrink_200_200/0/1692071479436?e=1703721600&v=beta&t=HZ_Et13Y1q9t0lerGzIgnO12zifzBaVLZJfaznQnCK0" alt="Foto do Membro 2" width="100">
       <p><strong>Lucas Dias</strong><br>Email: lprd@cesar.school</p>
     </li>
     <li>
-      <img src="https://media.licdn.com/dms/image/D4D03AQE24HnK2quhIA/profile-displayphoto-shrink_200_200/0/1683226976049?e=1698278400&v=beta&t=VRJhDY1yUNPBMU5pBmTxBgipmhyHTCGxTE5M28oMr2I" alt="Foto do Membro 3" width="100">
+      <img src="https://media.licdn.com/dms/image/D4D03AQE24HnK2quhIA/profile-displayphoto-shrink_200_200/0/1683226976049?e=1703721600&v=beta&t=Jm3lnQmDkaKmH1LLn_b2XgKVIhz5JZryYvKTPFzLtDc" alt="Foto do Membro 3" width="100">
       <p><strong>Tiago Stamford</strong><br>Email: tjs2@cesar.school</p>
     </li>
     <li>
