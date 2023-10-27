@@ -7,21 +7,24 @@
         padding: 0;
         display: flex;
         justify-content: center; /* Centralizar horizontalmente */
-        align-items: ;
+        align-items: center; /* Centralizar verticalmente */
         height: 100vh; /* Preencher a altura da tela */
     }
 
     /* Estilos para o contêiner */
     .container {
-        text-align: ;
+        
         font-size: 25px;
         padding: 20px; /* Ajuste o preenchimento para dar espaço à borda */
-        
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
     }
 
     /* Estilos para o título da página */
     h1 {
-        color: #009688;
+        color: #FF914D; /* Alterado para a cor #FF914D */
     }
 
     /* Estilos para o formulário */
@@ -50,7 +53,7 @@
 
     /* Estilos para o botão de envio */
     button {
-        background-color: #009688;
+        background-color: #FF914D; /* Alterado para a cor #FF914D */
         color: #fff;
         border: none;
         padding: 10px 20px;
@@ -60,9 +63,10 @@
     }
 
     button:hover {
-        background-color: #00796b;
+        background-color: #FF7B29; /* Alterado para uma cor mais escura quando hover (#FF7B29) */
     }
 </style>
+
 <div class="container">
     <h1>Tela de Cadastro</h1>
     <form method="post">
