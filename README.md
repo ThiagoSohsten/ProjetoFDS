@@ -39,7 +39,7 @@
     <img src="https://yt3.googleusercontent.com/IKyXeSMd3DtfAjRGyKicdwlrzD4bIGdpsRepFg6yJ5cUloq7AilRgUQjK7yPeNVNQguNh09r=s176-c-k-c0x00ffffff-no-rj" alt="Drive">
     <p><strong>Drive (Screencasts(Testes automatizados e Aplicação),Diagramas e Prints ATUALIZADOS): <a href="https://drive.google.com/drive/folders/1IQZgEtp__vsEfwzfm4nDA6aC549rs3jV?usp=drive_link">Link para o Drive</a></strong></p>
    
- <a href="https://youtu.be/dvE2VySL1_A?si=tFi-1vtA--QZInl6">Youtube(caso prefira)</a></strong></p>
+
   </li>
   <li>
     <img src="https://yt3.googleusercontent.com/ytc/AOPolaTKptMl3ECOuY8yZ8qUj-faXoDTTQbP6u2KIwQh8w=s176-c-k-c0x00ffffff-no-rj" alt="Discord">
