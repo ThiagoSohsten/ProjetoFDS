@@ -14,7 +14,7 @@
     </li>
      <li>
       <img src="https://media.licdn.com/dms/image/C4E03AQFNx_SdHL32vA/profile-displayphoto-shrink_200_200/0/1660256684950?e=1704326400&v=beta&t=cZCQ1J7Hxv9VBh3k9t0etlLavauJhquwu1BNS_LBKEw" alt="Foto de JP" width="100">
-      <p><strong>João Pedro</strong><br>Email: jprd@cesar.school</p>
+      <p><strong>João Pedro</strong><br>Email: jprda@cesar.school</p>
     </li>
   </ul>
     <li>
@@ -38,6 +38,7 @@
   <li>
     <img src="https://yt3.googleusercontent.com/IKyXeSMd3DtfAjRGyKicdwlrzD4bIGdpsRepFg6yJ5cUloq7AilRgUQjK7yPeNVNQguNh09r=s176-c-k-c0x00ffffff-no-rj" alt="Drive">
     <p><strong>Drive (Screencasts(Testes automatizados e Aplicação),Diagramas e Prints ATUALIZADOS): <a href="https://drive.google.com/drive/folders/1IQZgEtp__vsEfwzfm4nDA6aC549rs3jV?usp=drive_link">Link para o Drive</a></strong></p>
+    *Todos os arquivos desta entrega estão dentro da pasta "Entrega03" do GoogleDrive.
    
 
   </li>
