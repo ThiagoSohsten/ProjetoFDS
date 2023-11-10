@@ -1,10 +1,8 @@
 from django.contrib import messages
 from django.contrib.auth import logout,login,authenticate
-from .forms import CustomUserCreationForm, NichoForm, AvaliacaoForm
+from .forms import CustomUserCreationForm, NichoForm, AvaliacaoForm, CadastroCartaoForm 
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import ItemCarrinho,Produto 
 from django.http import HttpResponse
-from .forms import CadastroCartaoForm 
 from .models import ItemCarrinho, Produto, CustomUser, ItemPedido
 
 
