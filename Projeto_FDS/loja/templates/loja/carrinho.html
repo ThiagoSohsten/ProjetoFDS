@@ -89,19 +89,35 @@
         .continue-shopping-link:hover {
             text-decoration: underline;
         }
+        /* Estilos para o botão "Remover" */
+.remove-button {
+    background-color: #FF0000; /* Vermelho */
+    color: #fff;
+    border: none;
+    padding: 5px 10px; /* Ajuste o tamanho conforme necessário */
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.remove-button:hover {
+    background-color: #CC0000; /* Cor mais escura quando hover */
+}
+
     </style>
     
 </head>
 <body>
     <div class="cart-container">
         <h2>Meu Carrinho</h2>
-
+    
         {% if carrinho_itens %}
             <ul class="cart-list">
                 {% for item in carrinho_itens %}
                 <div>
                     {{ item.produto.nome }} - {{ item.quantidade }}
-                    <a href="{% url 'remover_do_carrinho' produto_id=item.produto.id %}">Remover</a>
+                    <a href="{% url 'remover_do_carrinho' produto_id=item.produto.id %}" class="remove-button">Remover</a>
                 </div>
             {% endfor %}
             
@@ -111,9 +127,10 @@
         {% else %}
             <p class="empty-cart-message">Seu carrinho está vazio</p>
         {% endif %}
-
+    
         <a href="{% url 'home' %}" class="continue-shopping-link">Continuar Comprando</a>
     </div>
+    
 </body>
 </html>
 
