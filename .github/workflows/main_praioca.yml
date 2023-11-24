@@ -42,8 +42,9 @@ jobs:
         with:
           name: python-app
           path: |
-            Projeto_FDS
-            !venv/
+            AplicaçãowebLojadepraia
+            !AplicaçãowebLojadepraia/venv/
+
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
