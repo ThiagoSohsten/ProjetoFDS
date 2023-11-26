@@ -52,7 +52,7 @@
 <div style="text-align: justify;">
   
  
- <a href="prainha.azurewebsites.net">Link para o deploy</a>
+ <a href="praioca.azurewebsites.net">Link para o deploy</a>
 
 
  
