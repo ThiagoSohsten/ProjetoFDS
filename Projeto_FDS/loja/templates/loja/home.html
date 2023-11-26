@@ -5,7 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de Praia</title>
     <style>
+        /* Estilos para o formulário de busca */
+.busca {
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.busca input[type="text"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 80%;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.busca button {
+    background-color: #FF914D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.busca button:hover {
+    background-color: #FF7B29;
+}
+
+/* Ajustar a margem do container para dar espaço para o formulário de busca */
+.container {
+    margin-top: 40px;
+}
+
         body {
+
+            
             font-family: 'League Spartan', sans-serif;
             margin: 0;
             padding: 0;
@@ -111,6 +154,15 @@
             <a href="{% url 'minhas_compras' %}">Minhas Compras</a>
         </div>
     </header>
+
+    <div class="busca">
+        <form action="{% url 'home' %}" method="get">
+            <input type="text" name="q" placeholder="Buscar produtos...">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+    
+
     <div class="container">
         {% for produto in produtos %}
             <div class="produto">

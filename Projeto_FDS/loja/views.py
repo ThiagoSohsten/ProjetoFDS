@@ -4,16 +4,26 @@ from .forms import CustomUserCreationForm, NichoForm, AvaliacaoForm, CadastroCar
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import ItemCarrinho, Produto, CustomUser, ItemPedido
+from django.db.models import Q
 
+
+from django.db.models import Q  # Não esqueça de importar Q no início do arquivo
+
+def home(request):
+    query = request.GET.get('q')  # Obtém o parâmetro de busca do GET request
+    if query:
+        # Filtra os produtos pelo nome ou pela descrição que contenham o termo de busca
+        produtos = Produto.objects.filter(Q(nome__icontains=query) | Q(descricao__icontains=query))
+    else:
+        produtos = Produto.objects.all()  # Se não houver termo de busca, retorna todos os produtos
+    return render(request, 'loja/home.html', {'produtos': produtos})
 
 def remove_do_carrinho(request, item_id):
     item = get_object_or_404(ItemCarrinho, id=item_id)
     item.delete()
     return redirect('carrinho')
 
-def home(request):
-    produtos = Produto.objects.all()
-    return render(request, 'loja/home.html', {'produtos': produtos})
+
 
 
 
@@ -62,9 +72,7 @@ def nicho(request):
 
 # ... (Outras views e importações)
 
-def home(request):
-    produtos = Produto.objects.all()
-    return render(request, 'loja/home.html', {'produtos': produtos})
+
 
 def avaliacao(request):
     if request.method == 'POST':
