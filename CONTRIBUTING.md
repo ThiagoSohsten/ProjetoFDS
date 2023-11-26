@@ -27,13 +27,24 @@ Para configurar o ambiente de desenvolvimento, siga as etapas abaixo:
 
    ```bash
    git clone https://github.com/seu-usuario/prainha.git
+2. Instale o django:
+  
+  ```bash
+  pip install django
+3. Inicialize o ambiente virtual Linux/Windows:
+
+  ```bash
+  source venv/bin/activate
+  venv\Scripts\Activate
+
+
 ## Como Fazer
 
 ### Como fazer um relatório de bug
 
 Se você encontrar um bug em nosso projeto, por favor, siga estas etapas:
 
-1. Verifique se o bug não foi relatado anteriormente. Você pode verificar nossa lista de bugs existentes [aqui](link-para-lista-de-bugs).
+1. Verifique se o bug não foi relatado anteriormente. Você pode verificar nossa lista de bugs existentes no "Issues").
 
 2. Se o bug ainda não foi relatado, crie um novo relatório de bug. Certifique-se de fornecer detalhes claros sobre o bug, incluindo passos para reproduzi-lo.
 
